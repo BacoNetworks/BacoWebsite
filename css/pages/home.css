@@ -656,6 +656,7 @@
 @media screen and (max-width: 621px) {
     #header .content {
         margin-top: 100px;
+        margin-bottom: 100px;
     }
     
     #header .content .right .stats .stat-discord  {
@@ -667,7 +668,6 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
-        margin-bottom: 50px;
     }
 
     #header .content .right .stats .stat:hover .icon {
@@ -734,5 +734,10 @@
 
     #vote .content .info {
         display: none;
+    }
+
+    #vote .content {
+        flex-direction: column;
+        gap: 40px;
     }
 }
