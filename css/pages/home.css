@@ -569,17 +569,13 @@
 @media screen and (max-width: 1625px) {
     #header .content {
         padding: 150px 90px;
-        align-items: start;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 1361px) {
     #header .content {
-        flex-direction: column;
-        padding: 120px 90px;
-        height: 100%;
-        gap: 60px;
+        padding: 150px 30px;
     }
 
     #header .content .left .server-name p {
@@ -594,35 +590,13 @@
         font-size: 16px;
     }
 
-    #header .content .left {
-        gap: 30px;
-        justify-content: left;
+    #header .content .right {
+        width: 100%;
     }
 
     #header .content .right .stats {
-        width: fit-content;
-    }
-
-    #header .content .right .logo-img {
-        display: none;
-    }
-
-    @media screen and (min-height: 745px) {
-        #header .content {
-            justify-content: center;
-        }
-
-        #header .content .left {
-            height: fit-content;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        #header .content .right {
-            height: fit-content;
-            justify-content: center;
-            gap: 30px;
-        }
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
