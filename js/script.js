@@ -1,7 +1,6 @@
 /*
 Configuration
 ------------------------
-If something doesn't work please contact me on discord (Astronawta#0012).
 */
 
 const config = {
@@ -9,7 +8,6 @@ const config = {
         serverLogoImageFileName: "BN_Logo1.webp", /*This is a file name for logo in /images/ (If you upload new logo with other name, you must change this value)*/
         serverName: "BacoNetworks", /*Server name*/
         serverIp: "play.baconetworks.com", /*Server IP (if you want to add online user counter, you must have true the enable-status and enable-query of server.properties)*/
-        discordServerID: "272038455683448834", /*Your server ID (if you want to add online user counter, you must have enabled Discord server widget)*/
         serverIpATM10: "atm10.baconetworks.com",
         serverIpATM10TTS: "atm10sky.baconetworks.com",
         serverIpSF4: "sf4.baconetworks.com",
@@ -149,9 +147,6 @@ const setDataFromConfigToHtml = async () => {
     /*Set config data to navbar*/
     serverName.innerHTML = config.serverInfo.serverName;
     serverLogo.src = `images/` + config.serverInfo.serverLogoImageFileName;
-
-    /*Set config data to header*/
-    /*serverIp.innerHTML = config.serverInfo.serverIp;*/
 
     let locationPathname = location.pathname;
 

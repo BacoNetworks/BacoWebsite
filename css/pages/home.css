@@ -710,10 +710,15 @@
     #vote .content .links {
         flex-wrap: wrap;
         flex-direction: row;
+        margin-top: 75px;
     }
 
     #vote .content .links .link {
         max-width: 300px;
+    }
+
+    #vote .content .info {
+        display: none;
     }
 
     #vote .content {
@@ -725,5 +730,9 @@
 @media screen and (max-width: 690px) {
     #vote .content .links .link {
         max-width: 100%;
+    }
+
+    #vote .content .info {
+        display: none;
     }
 }
