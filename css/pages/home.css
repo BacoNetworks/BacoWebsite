@@ -154,7 +154,7 @@
 }
 
 #header .content .right .logo-img {
-    max-width: 750px;
+    max-width: 100%;
     transform: translatey(0px);
     animation: float 3s ease-in-out infinite;
 }
