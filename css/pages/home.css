@@ -687,6 +687,16 @@
     }
 }
 
+@media screen and (max-width: 621px) {
+    #minigames .content .game img {
+        display: none;
+    }
+
+    #minigames .content .game .info {
+        max-width: 100%;
+    }
+}
+
 /*Vote*/
 @media screen and (max-width: 1313px) {
     #vote .content .links {
