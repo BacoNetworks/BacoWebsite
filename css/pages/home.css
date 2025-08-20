@@ -51,27 +51,6 @@
     color: var(--red-color);
 }
 
-#header .content .left .join-discord {
-    background: var(--copy-ip-button-background);
-    border: 2px solid var(--main-color);
-    border-radius: 3px;
-    padding: 10px 30px;
-    color: var(--white-color);
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-#header .content .left .join-discord:hover {
-    opacity: 0.8;
-}
-
-#header .content .left .join-discord a {
-    text-decoration: none;
-    color: var(--white-color);
-}
-
 #header .content .left {
     display: flex;
     flex-direction: column;
@@ -125,6 +104,28 @@
 
 #header .content .left .buttons .copy-ip:hover {
     opacity: 0.8;
+}
+
+#header .content .left .join-discord {
+    background: var(--copy-ip-button-background);
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: var(--white-color);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+}
+
+#header .content .left .join-discord:hover {
+    opacity: 0.8;
+}
+
+#header .content .left .join-discord a {
+    text-decoration: none;
+    color: var(--white-color);
 }
 
 #header .content .left .buttons .how-to-join {
@@ -603,6 +604,7 @@
 @media screen and (max-width: 819px) {
     #header .content {
         padding: 150px 30px;
+        flex-direction: column;
     }
 
     #header .content .left .server-name p {
@@ -619,6 +621,10 @@
 
     #header .content .right {
         width: 100%;
+    }
+
+    #header .content .right .logo-img {
+        display: none;
     }
 
     #header .content .right .stats {
@@ -655,7 +661,7 @@
     }
 }
 
-@media screen and (max-width: 383px) {
+@media screen and (max-width: 385px) {
     #header .content .left .buttons {
         flex-direction: column;
     }
