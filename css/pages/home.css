@@ -662,6 +662,14 @@
 }
 
 @media screen and (max-width: 385px) {
+    #header .content .left .server-name h1 {
+        font-size: 25px;
+    }
+
+    #header .content .left .server-name p {
+        font-size: 12px;
+    }
+    
     #header .content .left .buttons {
         flex-direction: column;
     }
