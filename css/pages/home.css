@@ -176,6 +176,10 @@
     align-items: center;
 }
 
+#header .content .right .stats a {
+	text-decoration: none;
+}
+
 #header .content .right .stats .stat .icon {
     border-radius: 5px;
     background: var(--stat-icon-background-2);
