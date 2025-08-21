@@ -231,17 +231,17 @@
 
 
 /*Mini games*/
-#minigames {
+#moddedservers {
     background: var(--stats-background);
 }
 
-#minigames .content {
+#moddedservers .content {
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-#minigames .content .game {
+#moddedservers .content .game {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -250,7 +250,7 @@
     gap: 60px;
 }
 
-#minigames .content .buttons .how-to-join {
+#moddedservers .content .buttons .how-to-join {
     background: var(--how-to-join-button-background);
     border: 2px solid var(--description-color);
     border-radius: 3px;
@@ -263,19 +263,19 @@
     width: 100%;
 }
 
-#minigames .content .buttons .how-to-join:hover {
+#moddedservers .content .buttons .how-to-join:hover {
     opacity: 0.8;
 }
 
-#minigames .content .game:nth-child(even) img{
+#moddedservers .content .game:nth-child(even) img{
     order: 1;
 }
 
-#minigames .content .game:nth-child(even) img:hover {
+#moddedservers .content .game:nth-child(even) img:hover {
     transform: rotate(2deg);
 }
 
-#minigames .content .game img {
+#moddedservers .content .game img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -283,25 +283,25 @@
     transition: 0.2s;
 }
 
-#minigames .content .game img:hover {
+#moddedservers .content .game img:hover {
     transform: rotate(-1deg);
 }
 
-#minigames .content .game .info {
+#moddedservers .content .game .info {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 50%;
 }
 
-#minigames .content .game .info .section-title {
+#moddedservers .content .game .info .section-title {
     font-size: 30px;
     font-weight: 700;
     color: var(--white-color);
     position: relative;
 }
 
-#minigames .content .game .info .section-title::before {
+#moddedservers .content .game .info .section-title::before {
     content: "";
     position: absolute;
     bottom: -9px;
@@ -312,7 +312,7 @@
     background: var(--description-color);
 }
 
-#minigames .content .game .info .section-title::after {
+#moddedservers .content .game .info .section-title::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -323,17 +323,17 @@
     background: var(--main-color);
 }
 
-#minigames .content .game .info .game-description {
+#moddedservers .content .game .info .game-description {
     color: var(--description-color);
     font-size: 17px;
     line-height: 1.6;
 }
 
-#minigames .content .game .info .game-description ul {
+#moddedservers .content .game .info .game-description ul {
     padding: 10px 0 0 40px;
 }
 
-#minigames .content .game .info .ip-copied {
+#moddedservers .content .game .info .ip-copied {
     color: var(--green-color);
     background: var(--ip-copied-background);
     padding: 10px 20px;
@@ -343,22 +343,22 @@
     display: none;
 }
 
-#minigames .content .game .info .ip-copied.active {
+#moddedservers .content .game .info .ip-copied.active {
     display: flex;
 }
 
-#minigames .content .game .info .ip-copied.error {
+#moddedservers .content .game .info .ip-copied.error {
     background: var(--warning-background);
     color: var(--red-color);
 }
 
-#minigames .content .game .info .buttons {
+#moddedservers .content .game .info .buttons {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-#minigames .content .game .info .buttons .copy-ip {
+#moddedservers .content .game .info .buttons .copy-ip {
     background: var(--copy-ip-button-background);
     border: 2px solid var(--main-color);
     border-radius: 3px;
@@ -370,7 +370,7 @@
     transition: 0.2s;
 }
 
-#minigames .content .game .info .buttons .copy-ip:hover {
+#moddedservers .content .game .info .buttons .copy-ip:hover {
     opacity: 0.8;
 }
 
@@ -681,22 +681,22 @@
 
 /*Mini games*/
 @media screen and (max-width: 1141px) {
-    #minigames .content .game {
+    #moddedservers .content .game {
         flex-direction: column;
         gap: 40px;
     }
 
-    #minigames .content .game:nth-child(even) img{
+    #moddedservers .content .game:nth-child(even) img{
         order: 0;
     }
 }
 
 @media screen and (max-width: 621px) {
-    #minigames .content .game img {
+    #moddedservers .content .game img {
         display: none;
     }
 
-    #minigames .content .game .info {
+    #moddedservers .content .game .info {
         max-width: 100%;
     }
 }
