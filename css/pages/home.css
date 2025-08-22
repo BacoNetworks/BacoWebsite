@@ -447,20 +447,25 @@
     gap: 40px;
     flex: 1;
     margin-left: 50px;
+    min-width: 50%;
 }
 
 #vote .content .email-link {
     color: #39BEFF;
 }
 
-#vote .content .info .section-title {
+#vote .content .info .section-title,.section-title-mobile {
     font-size: 30px;
     font-weight: 700;
     color: var(--white-color);
     position: relative;
 }
 
-#vote .content .info .section-title::before {
+#vote .content .info .section-title-mobile {
+    display: none;
+}
+
+#vote .content .info .section-title::before,.section-title-mobile::before {
     content: "";
     position: absolute;
     bottom: -9px;
@@ -471,7 +476,7 @@
     background: var(--description-color);
 }
 
-#vote .content .info .section-title::after {
+#vote .content .info .section-title::after,.section-title-mobile::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -493,12 +498,14 @@
 #vote .content .links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: center;
 }
 
 #vote .content .links .url {
     text-decoration: none;
+    width: 100%;
 }
 
 #vote .content .links .url:hover .link .link-description .icon {
@@ -512,7 +519,7 @@
     background: var(--stats-background);
     padding: 20px;
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 #vote .content .links .link h5 {
@@ -703,39 +710,57 @@
 
 /*Vote*/
 @media screen and (max-width: 1313px) {
+    #vote .content .links .link h5 {
+        font-size: 15px;
+    }
+    
     #vote .content .links {
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }
 
 @media screen and (max-width: 909px) {
-    #vote .content .links {
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 75px;
-    }
-
     #vote .content .links .link {
-        max-width: 300px;
+        max-width: 100%;
     }
 
-    #vote .content .info {
+    #vote .content .info .section-description {
         display: none;
+    }
+
+    #vote .content .info .section-title {
+        display: none;
+    }
+
+    #vote .content .info .section-title-mobile {
+        display: flex;
     }
 
     #vote .content {
         flex-direction: column;
         gap: 40px;
     }
+
+    #vote .content .info {
+        margin-left: 0px;
+    }
 }
 
 @media screen and (max-width: 690px) {
-    #vote .content .links .link {
-        max-width: 100%;
+    #vote .content .links .link h5 {
+        font-size: 15px;
+        font-weight: 600;
     }
 
-    #vote .content .info {
-        display: none;
+    #vote .content .links .link {
+        max-width: 100%;
+        min-width: 200px;
+    }
+
+    #vote .content .links {
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
     #vote .content {
