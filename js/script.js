@@ -156,8 +156,6 @@ const setDataFromConfigToHtml = async () => {
     let locationPathname = location.pathname;
 
     if(locationPathname == "/" || locationPathname.includes("index")) {
-        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
-
         copyIpatm10tts();
         copyIpatm10();
         copyIpsf4();
