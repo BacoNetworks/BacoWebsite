@@ -12,7 +12,7 @@ const config = {
         serverIpATM10TTS: "atm10sky.baconetworks.com",
         serverIpSF4: "sf4.baconetworks.com",
         serverIpSB2: "sb2.baconetworks.com",
-        discordServerID: "489529070913060867"
+        discordServerID: "272038455683448834"
     }
 }
 
