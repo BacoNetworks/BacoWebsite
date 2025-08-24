@@ -5,13 +5,14 @@ Configuration
 
 const config = {
     serverInfo: {
-        serverLogoImageFileName: "BN_Logo1.webp", /*This is a file name for logo in /images/ (If you upload new logo with other name, you must change this value)*/
-        serverName: "BacoNetworks", /*Server name*/
-        serverIp: "play.baconetworks.com", /*Server IP (if you want to add online user counter, you must have true the enable-status and enable-query of server.properties)*/
+        serverLogoImageFileName: "BN_Logo1.webp",
+        serverName: "BacoNetworks",
+        serverIp: "play.baconetworks.com",
         serverIpATM10: "atm10.baconetworks.com",
         serverIpATM10TTS: "atm10sky.baconetworks.com",
         serverIpSF4: "sf4.baconetworks.com",
-        serverIpSB2: "sb2.baconetworks.com"
+        serverIpSB2: "sb2.baconetworks.com",
+        discordServerID: "489529070913060867"
     }
 }
 
@@ -20,19 +21,27 @@ const navbar = document.querySelector(".navbar");
 const navbarLinks = document.querySelector(".links");
 const hamburger = document.querySelector(".hamburger");
 
+const discordOnlineUsers = document.querySelector(".discord-online-users");
+
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
     navbarLinks.classList.toggle("active");
 })
 
-/*Config navbar*/
-const serverName = document.querySelector(".server-name");
-const serverLogo = document.querySelector(".logo-img");
-/*Config header*/
-const serverIp = document.querySelector(".minecraft-server-ip");
-const serverLogoHeader = document.querySelector(".logo-img-header");
-const discordOnlineUsers = document.querySelector(".discord-online-users");
-const minecraftOnlinePlayers = document.querySelector(".minecraft-online-players");
+const getDiscordOnlineUsers = async () => {
+    try {
+        const discordServerId = config.serverInfo.discordServerID;
+
+        const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
+        let response = await fetch(apiWidgetUrl);
+        let data = await response.json();
+
+        if(!data.presence_count) return "...";
+        else return (await data.presence_count);
+    } catch (e) {
+        return "...";
+    }
+}
 
 /*IP copy only works if you have HTTPS on your website*/
 const copyIpatm10tts = () => {
@@ -144,13 +153,11 @@ const copyIpsb2 = () => {
 }
 
 const setDataFromConfigToHtml = async () => {
-    /*Set config data to navbar*/
-    serverName.innerHTML = config.serverInfo.serverName;
-    serverLogo.src = `images/` + config.serverInfo.serverLogoImageFileName;
-
     let locationPathname = location.pathname;
 
     if(locationPathname == "/" || locationPathname.includes("index")) {
+        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
+
         copyIpatm10tts();
         copyIpatm10();
         copyIpsf4();
