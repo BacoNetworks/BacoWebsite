@@ -191,7 +191,7 @@ body {
 
 /*Other*/
 section:not(#header) .content {
-  padding: 90px 150px;
+  padding: 90px;
   width: 100%;
 }
 
@@ -235,10 +235,6 @@ section:not(#header) .content {
 @media screen and (max-width: 1625px) {
   section:not(#header) .content {
     padding: 90px;
-  }
-
-  #footer {
-    padding: 20px 90px;
   }
 }
 

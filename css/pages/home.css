@@ -505,7 +505,7 @@
 
 #vote .content .links .url {
     text-decoration: none;
-    width: 100%;
+    width: 45%;
 }
 
 #vote .content .links .url:hover .link .link-description .icon {
@@ -709,6 +709,12 @@
 }
 
 /*Vote*/
+@media screen and (max-width: 1625px) {
+    #vote .content .links .url {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 1313px) {
     #vote .content .links .link h5 {
         font-size: 15px;
