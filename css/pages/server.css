@@ -1,3 +1,27 @@
+#header {
+    background: url("../../images/ATM10.webp") no-repeat fixed center;
+    min-width: 100%;
+    min-height: 800px;
+    height: 80vh;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+}
+
+#header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
 .container-yt {
     display: flex;
     justify-content: center;
