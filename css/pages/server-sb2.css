@@ -1,0 +1,65 @@
+#header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%),
+                url('../../images/SB2.webp') no-repeat center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 40vh;
+    height: 40vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+}
+
+#header .content {
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 150px;
+    position: relative;
+}
+
+#header .content .left .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+#moddedservers .content .game .container-yt {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+    
+#moddedservers .content .game .container-yt iframe {
+    display:block;
+    aspect-ratio: 16 / 9;
+    width: 40%;
+}
+
+@media screen and (max-width: 3250px) {
+    #moddedservers .content .game .container-yt iframe {
+        display:block;
+        aspect-ratio: 16 / 9;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 2020px) {
+    #moddedservers .content .game .container-yt iframe {
+        display:block;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    #header .content {
+        padding: 0px;
+    }
+}
