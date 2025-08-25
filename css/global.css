@@ -101,7 +101,7 @@ body {
   color: var(--white-color);
 }
 
-.navbar .links .link.active::after {
+.navbar .links .link:hover:after {
   content: "";
   position: absolute;
   bottom: -4px;
