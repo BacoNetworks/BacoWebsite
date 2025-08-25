@@ -11,8 +11,7 @@ const config = {
         serverIpATM10: "atm10.baconetworks.com",
         serverIpATM10TTS: "atm10sky.baconetworks.com",
         serverIpSF4: "sf4.baconetworks.com",
-        serverIpSB2: "sb2.baconetworks.com",
-        discordServerID: "272038455683448834"
+        serverIpSB2: "sb2.baconetworks.com"
     }
 }
 
@@ -21,27 +20,10 @@ const navbar = document.querySelector(".navbar");
 const navbarLinks = document.querySelector(".links");
 const hamburger = document.querySelector(".hamburger");
 
-const discordOnlineUsers = document.querySelector(".discord-online-users");
-
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
     navbarLinks.classList.toggle("active");
 })
-
-const getDiscordOnlineUsers = async () => {
-    try {
-        const discordServerId = config.serverInfo.discordServerID;
-
-        const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
-        let response = await fetch(apiWidgetUrl);
-        let data = await response.json();
-
-        if(!data.presence_count) return "...";
-        else return (await data.presence_count);
-    } catch (e) {
-        return "...";
-    }
-}
 
 /*IP copy only works if you have HTTPS on your website*/
 const copyIpatm10tts = () => {
