@@ -142,8 +142,7 @@ const setDataFromConfigToHtml = async () => {
         copyIpatm10();
         copyIpsf4();
         copyIpsb2();
-    } 
-    if(locationPathname == "/" || locationPathname.includes("server-atm10")) {
+    } else if(locationPathname.includes("server-atm10")) {
         copyIpatm10();
     } 
 }
